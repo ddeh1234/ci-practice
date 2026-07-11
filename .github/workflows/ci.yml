@@ -15,7 +15,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install pytest
+        run: pip install pytest pytest-cov
 
       - name: Run tests
-        run: python -m pytest -v
+        run: python -m pytest -v --cov=calculator --cov-report=term-missing
